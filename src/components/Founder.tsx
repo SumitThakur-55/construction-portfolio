@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
+
 export default function Founder() {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -23,14 +24,13 @@ export default function Founder() {
                     {/* Section Title */}
                     <div className="text-center mb-12">
                         <h2 className="text-4xl md:text-5xl font-bold text-[#003e76] mb-4">
-                            Founder's Legacy
+                            Founder&apos;s Legacy
                         </h2>
                         <div className="w-24 h-1 bg-[#003e76] mx-auto"></div>
                     </div>
 
                     {/* Main Content */}
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
-
                         {/* Left Side - Text Content */}
                         <div className="space-y-6 order-2 lg:order-1">
                             <div className="space-y-4">
@@ -38,14 +38,14 @@ export default function Founder() {
                                     HON. MUKESH SHARMA
                                 </h3>
                                 <p className="text-xl text-gray-600 font-medium">
-                                    Founder & Principal Engineer, Mukesh Sharma & Associates
+                                    Founder &amp; Principal Engineer, Mukesh Sharma &amp; Associates
                                 </p>
                             </div>
 
                             <div className="prose prose-lg text-gray-700 leading-relaxed">
                                 <p>
                                     With an unwavering passion for engineering and architectural excellence,
-                                    Hon. Mukesh Sharma founded <em className="text-[#003e76] font-semibold">Mukesh Sharma & Associates</em> in 1993.
+                                    Hon. Mukesh Sharma founded <em className="text-[#003e76] font-semibold">Mukesh Sharma &amp; Associates</em> in 1993.
                                     Backed by an impressive legacy of <strong className="text-[#003e76]">over 32 years</strong> in the field,
                                     he continues to lead the firm with a clear vision — to design and deliver enduring structures
                                     that inspire, empower, and stand the test of time.
@@ -53,14 +53,14 @@ export default function Founder() {
 
                                 <p>
                                     His deep-rooted commitment to quality, innovation, and client trust has laid the foundation
-                                    for the company's continued growth and success in the construction and engineering industry.
+                                    for the company&apos;s continued growth and success in the construction and engineering industry.
                                 </p>
                             </div>
 
                             {/* Quote Block */}
                             <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-[#003e76]">
                                 <blockquote className="text-lg italic text-gray-600">
-                                    "Design is not just about structures — it's about shaping lives."
+                                    &quot;Design is not just about structures — it&apos;s about shaping lives.&quot;
                                 </blockquote>
                                 <cite className="text-sm text-[#003e76] font-semibold mt-2 block">
                                     - Hon. Mukesh Sharma
@@ -92,9 +92,11 @@ export default function Founder() {
                         <div className="order-1 lg:order-2">
                             <div className="relative group">
                                 <div className="absolute inset-0 bg-gradient-to-r from-[#003e76]/20 to-transparent rounded-2xl"></div>
-                                <img
-                                    src="/founder"
+                                <Image
+                                    src="/founder.jpg"
                                     alt="Hon. Mukesh Sharma - Founder & Principal Engineer"
+                                    width={600}
+                                    height={500}
                                     className="w-full h-[500px] object-cover rounded-2xl shadow-2xl transition-transform duration-300 group-hover:scale-105"
                                 />
 
@@ -137,7 +139,7 @@ export default function Founder() {
                                     />
                                     <div>
                                         <h4 className="text-xl font-semibold text-[#003e76]">Hon. Mukesh Sharma</h4>
-                                        <p className="text-gray-600">Founder & Principal Engineer</p>
+                                        <p className="text-gray-600">Founder &amp; Principal Engineer</p>
                                     </div>
                                 </div>
 
@@ -149,7 +151,7 @@ export default function Founder() {
                                         His 32+ years of experience spans across residential, commercial, and industrial projects.
                                     </p>
 
-                                    <h5 className="text-lg font-semibold text-[#003e76]">Vision & Philosophy</h5>
+                                    <h5 className="text-lg font-semibold text-[#003e76]">Vision &amp; Philosophy</h5>
                                     <p>
                                         His philosophy centers around creating structures that are not just functional but
                                         also sustainable and aesthetically pleasing. Every project under his guidance
@@ -158,7 +160,7 @@ export default function Founder() {
 
                                     <h5 className="text-lg font-semibold text-[#003e76]">Notable Achievements</h5>
                                     <ul className="list-disc list-inside space-y-2">
-                                        <li>Founded Mukesh Sharma & Associates in 1993</li>
+                                        <li>Founded Mukesh Sharma &amp; Associates in 1993</li>
                                         <li>Over 200+ successful projects completed</li>
                                         <li>Recognized for excellence in sustainable construction</li>
                                         <li>Mentor to upcoming engineers and architects</li>
