@@ -202,7 +202,7 @@ export default function Founder() {
 
             {/* Main Content */}
             <div className="max-w-6xl w-full relative z-10 text-center">
-                <h2 className="text-4xl md:text-5xl font-bold text-[#003e76] mb-6">Founder's Legacy</h2>
+                <h2 className="text-4xl md:text-5xl font-bold text-[#003e76] mb-6">Founder&apos;s Legacy</h2>
 
                 <div className="flex justify-center items-center space-x-4 mb-10">
                     <div className="w-16 h-1 bg-[#003e76]"></div>

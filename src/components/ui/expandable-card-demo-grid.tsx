@@ -2,6 +2,7 @@
 
 import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
+import Image from "next/image";
 
 // Card data array - easy to update
 const cardsData = [
@@ -174,7 +175,7 @@ export function ExpandableCardDemo() {
               className="w-full max-w-[500px] h-full md:h-fit md:max-h-[90%] flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
             >
               <motion.div layoutId={`image-${active.title}-${id}`}>
-                <img
+                <Image
                   width={500}
                   height={500}
                   src={active.image}
@@ -256,7 +257,7 @@ export function ExpandableCardDemo() {
               >
                 <div className="relative overflow-hidden rounded-xl">
                   <motion.div layoutId={`image-${card.title}-${id}`}>
-                    <img
+                    <Image
                       width={320}
                       height={360}
                       src={card.image}
