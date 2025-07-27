@@ -11,30 +11,37 @@ import {
     MobileNavMenu,
     NavbarButton
 } from "@/components/ui/resizable-navbar";
+
 import { useState } from "react";
 
 export default function AppNavbar() {
     const [mobileOpen, setMobileOpen] = useState(false);
+
     const navItems = [
         { name: "Home", link: "/" },
         { name: "About", link: "/about" },
         { name: "Contact", link: "/contact" },
     ];
+
     return (
-        <Navbar >
+        <Navbar className="fixed top-3 left-0 right-0 z-50  ">
             {/* Desktop Nav */}
-            <NavBody>
+            <NavBody visible={true}>
                 <NavbarLogo />
                 <NavItems items={navItems} />
                 <div className="ml-auto">
                     <NavbarButton href="/book-call">Book a Call</NavbarButton>
                 </div>
             </NavBody>
+
             {/* Mobile Nav */}
-            <MobileNav>
+            <MobileNav visible={true}>
                 <MobileNavHeader>
                     <NavbarLogo />
-                    <MobileNavToggle isOpen={mobileOpen} onClick={() => setMobileOpen((v) => !v)} />
+                    <MobileNavToggle
+                        isOpen={mobileOpen}
+                        onClick={() => setMobileOpen((v) => !v)}
+                    />
                 </MobileNavHeader>
                 <MobileNavMenu isOpen={mobileOpen} onClose={() => setMobileOpen(false)}>
                     {navItems.map((item) => (
@@ -47,9 +54,11 @@ export default function AppNavbar() {
                             {item.name}
                         </a>
                     ))}
-                    <NavbarButton href="/book-call" className="w-full mt-2">Book a Call</NavbarButton>
+                    <NavbarButton href="/book-call" className="w-full mt-2">
+                        Book a Call
+                    </NavbarButton>
                 </MobileNavMenu>
             </MobileNav>
-        </Navbar>
+        </Navbar >
     );
-} 
+}

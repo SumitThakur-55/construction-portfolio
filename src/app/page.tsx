@@ -5,20 +5,25 @@ import HeroSection from "@/components/HeroSection";
 import OurPromise from "@/components/OurPromise";
 import OurVision from "@/components/OurVision";
 import OurProject from "@/components/OurProject";
-import Footer from "@/components/footer";
 import Founder from "@/components/Founder";
+import Footer from "@/components/footer";
 
 export default function HomePage() {
   return (
-    <main className="">
+    <main className="relative">
+      {/* Navbar overlays the content */}
       <AppNavbar />
-      <HeroSection />
-      <OurPromise />
-      <OurVision />
-      <OurProject />
-      <Founder />
-      <Footer />
+
+      {/* Give padding top to prevent content from hiding behind fixed navbar */}
+      <div className="">
+        <HeroSection />
+        <OurProject />
+        <OurPromise />
+        <OurVision />
+
+        <Founder />
+        <Footer />
+      </div>
     </main>
   );
 }
-

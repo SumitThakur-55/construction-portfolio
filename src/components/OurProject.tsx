@@ -3,8 +3,8 @@ import { ExpandableCardDemo } from './ui/expandable-card-demo-grid';
 
 export default function OurProject() {
     return (
-        <section className="bg-white py-16 px-4">
-            <div className="max-w-7xl mx-auto">
+        <section className="bg-white h-screen flex items-center justify-center px-4">
+            <div className="max-w-8xl px-4 w-full">
                 {/* Header Section */}
                 <div className="text-center mb-12">
                     <h2 className="text-4xl md:text-5xl font-bold text-[#003e76] mb-4">
