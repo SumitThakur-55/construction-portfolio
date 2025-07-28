@@ -7,6 +7,7 @@ import OurVision from "@/components/OurVision";
 import OurProject from "@/components/OurProject";
 import Founder from "@/components/Founder";
 import Footer from "@/components/footer";
+import Verticals from "@/components/Verticals";
 
 export default function HomePage() {
   return (
@@ -20,8 +21,8 @@ export default function HomePage() {
         <OurProject />
         <OurPromise />
         <OurVision />
-
         <Founder />
+        <Verticals />
         <Footer />
       </div>
     </main>
