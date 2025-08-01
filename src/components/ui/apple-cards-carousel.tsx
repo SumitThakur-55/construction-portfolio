@@ -15,6 +15,7 @@ import {
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "@/hooks/use-outside-click";
+import Image from "next/image";
 
 // Carousel Context
 interface CarouselContextType {
@@ -262,7 +263,7 @@ export const BlurImage: React.FC<BlurImageProps> = ({
   const [isLoading, setLoading] = useState(true);
 
   return (
-    <img
+    <Image
       className={cn(
         "h-full w-full transition duration-300",
         isLoading ? "blur-sm" : "blur-0",
