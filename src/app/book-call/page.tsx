@@ -6,7 +6,7 @@ export default function BookCallPage() {
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-2">Schedule a Call</h1>
-          <p className="text-gray-600">Fill out the form below and we'll get back to you soon</p>
+          <p className="text-gray-600">Fill out the form below and we&apos;ll get back to you soon</p>
         </div>
         <BookCall />
       </div>

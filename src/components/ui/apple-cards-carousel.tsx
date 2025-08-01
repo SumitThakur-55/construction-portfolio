@@ -7,6 +7,7 @@ import React, {
   createContext,
   useContext,
 } from "react";
+import Image from "next/image";
 import {
   IconArrowNarrowLeft,
   IconArrowNarrowRight,
@@ -33,7 +34,7 @@ interface CarouselProps {
   initialScroll?: number;
 }
 
-export const Carousel: React.FC<CarouselProps> = ({ items, initialScroll = 0 }) => {
+export const Carousel: React.FC<CarouselProps> = ({ items }) => {
   const carouselRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
@@ -146,7 +147,6 @@ export const Card = ({
 }) => {
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null!);
-  const { onCardClose } = useContext(CarouselContext);
 
   useOutsideClick(containerRef, () => handleClose());
 
@@ -262,19 +262,19 @@ export const BlurImage: React.FC<BlurImageProps> = ({
   const [isLoading, setLoading] = useState(true);
 
   return (
-    <img
-      className={cn(
-        "h-full w-full transition duration-300",
-        isLoading ? "blur-sm" : "blur-0",
-        className
-      )}
-      onLoad={() => setLoading(false)}
-      src={src}
-      width={width}
-      height={height}
-      loading="lazy"
-      decoding="async"
-      alt={alt || "Image"}
-    />
+    <div className={cn("relative h-full w-full", className)}>
+      <Image
+        className={cn(
+          "transition duration-300 object-cover",
+          isLoading ? "blur-sm" : "blur-0"
+        )}
+        onLoadingComplete={() => setLoading(false)}
+        src={src}
+        fill
+        sizes="(max-width: 768px) 100vw, 50vw"
+        alt={alt || "Image"}
+        priority={false}
+      />
+    </div>
   );
 };

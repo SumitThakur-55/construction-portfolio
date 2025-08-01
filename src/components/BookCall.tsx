@@ -52,7 +52,7 @@ export default function BookCall() {
         phone_number: '',
         work: ''
       });
-    } catch (error) {
+    } catch {
       setMessage({ text: 'Something went wrong. Please try again.', isError: true });
     } finally {
       setIsSubmitting(false);
