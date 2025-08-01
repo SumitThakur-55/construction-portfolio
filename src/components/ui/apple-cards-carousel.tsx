@@ -16,6 +16,7 @@ import {
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "@/hooks/use-outside-click";
+import Image from "next/image";
 
 // Carousel Context
 interface CarouselContextType {
