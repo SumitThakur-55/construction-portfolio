@@ -5,7 +5,6 @@ import React, {
   useRef,
   useState,
   createContext,
-  useContext,
 } from "react";
 import {
   IconArrowNarrowLeft,
@@ -34,7 +33,7 @@ interface CarouselProps {
   initialScroll?: number;
 }
 
-export const Carousel: React.FC<CarouselProps> = ({ items, initialScroll = 0 }) => {
+export const Carousel: React.FC<CarouselProps> = ({ items }) => {
   const carouselRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
@@ -138,7 +137,6 @@ type Card = {
 // Card Component
 export const Card = ({
   card,
-  index,
   layout = false,
 }: {
   card: Card;
@@ -147,7 +145,7 @@ export const Card = ({
 }) => {
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null!);
-  const { onCardClose } = useContext(CarouselContext);
+  // const { onCardClose } = useContext(CarouselContext);
 
   useOutsideClick(containerRef, () => handleClose());
 
